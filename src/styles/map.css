@@ -1,0 +1,21 @@
+.map-wrapper {
+  width: 70%;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.leaflet-container {
+  flex: 1;
+  border-radius: 10px;
+}
+
+.map-wrapper button {
+  padding: 0.9rem;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+}

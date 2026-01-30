@@ -1,0 +1,46 @@
+.cardTime {
+  width: 70%;
+  text-align: center;
+}
+
+.welcome h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.welcome p {
+  margin-top: 0.5rem;
+  color: #6b7280;
+}
+
+.time {
+  margin: 1.5rem 0;
+}
+
+.time strong {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.cardTime button {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-weight: bold;
+  font-size: 0.7rem;
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.cardTime button:hover {
+  background: #1d4ed8;
+}
