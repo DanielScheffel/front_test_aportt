@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const api = axios.create({ baseURL: 'https://api-teste-aportt.onrender.com' });
+const api = axios.create({ baseURL: 'http://api-teste-aportt.onrender.com' });
 
 export async function registrarPonto({ latitude, longitude, foto }) {
     

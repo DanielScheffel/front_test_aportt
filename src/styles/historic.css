@@ -1,0 +1,41 @@
+.historico-lista ul {
+  list-style: none;
+  padding: 0;
+}
+
+.historico-lista li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.historico-lista button {
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.historico-detalhe p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+.historico-detalhe img {
+  margin-top: 1rem;
+}
+
+.historico-detalhe .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.historico-detalhe .header button {
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}

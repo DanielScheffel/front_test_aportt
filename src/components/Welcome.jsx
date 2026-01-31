@@ -29,13 +29,13 @@ export default function Welcome({ onStart }) {
 
             const moment = agora.getHours();
 
-            let saudacao = "Bom dia";
+            let saudacao = 'Boa noite';
 
-            if(moment >= 12 && moment < 18) {
-                saudacao = "Boa tarde";
-            } else if (moment >= 18 && moment < 5) {
-                saudacao = "Boa noite";
-            }
+            if (moment >= 5 && moment < 12) {
+                saudacao = 'Bom dia';
+            } else if (moment >= 12 && moment < 18) {
+                saudacao = 'Boa tarde';
+        }
             setGreeting(saudacao);
 
             setDate(formatDate);
