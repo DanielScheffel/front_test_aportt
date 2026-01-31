@@ -59,6 +59,13 @@ main {
   overflow-y: auto;
 }
 
+@media  (max-width: 600px) {
+  .card.card.secundario {
+    max-width: 600px;
+  }
+  
+}
+
 .map-container,
 .camera-container {
   width: 100%;

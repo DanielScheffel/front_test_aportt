@@ -28,9 +28,9 @@ export default function Historico({ registros }) {
         <p><strong>IP:</strong> {selectedRegistro.ip}</p>
 
         <img
-          src={`http://localhost:3000/uploads/${selectedRegistro.foto}`}
+          src={`https://api-teste-aportt.onrender.com/uploads/${selectedRegistro.foto}`}
           alt="Foto do registro"
-          style={{ width: '100%', borderRadius: '8px' }}
+          style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
         />
       </div>
         )

@@ -6,6 +6,10 @@ export default function Camera({ onFinish }) {
   const canvasRef = useRef(null);
   const [stream, setStream] = useState(null);
 
+  const [cameraAtiva, setCameraAtiva] = useState(false);
+  const [foto, setFoto] = useState(null);
+
+
   async function startCamera() {
     const mediaStream = await navigator.mediaDevices.getUserMedia({
       video: true
@@ -13,6 +17,7 @@ export default function Camera({ onFinish }) {
 
     videoRef.current.srcObject = mediaStream;
     setStream(mediaStream);
+    setCameraAtiva(true);
   }
 
   function takePhoto() {
@@ -27,11 +32,13 @@ export default function Camera({ onFinish }) {
 
     canvas.toBlob((blob) => {
       const file = new File([blob], 'foto.jpg', { type: 'image/jpeg' });
-      console.log('Arquivo:', file);
+      // console.log('Arquivo:', file);
 
       // Para a câmera
       stream.getTracks().forEach(track => track.stop());
 
+      setCameraAtiva(false);
+      setFoto(file);
       onFinish(file);
     }, 'image/jpeg');
   }
@@ -43,8 +50,15 @@ export default function Camera({ onFinish }) {
       <canvas ref={canvasRef} style={{ display: 'none' }} />
 
       <div className="buttons">
-        <button onClick={startCamera}>Abrir câmera</button>
-      <button onClick={takePhoto}>Tirar foto</button>
+        {!cameraAtiva && !foto && (
+
+          <button onClick={startCamera}>Abrir câmera</button>
+        )}
+
+        {cameraAtiva && !foto && (
+
+          <button onClick={takePhoto}>Tirar foto</button>
+        )}
       </div>
     </div>
   );
